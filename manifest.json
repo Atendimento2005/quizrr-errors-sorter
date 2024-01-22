@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Quizrr Error Sorter",
+  "version": "1.2",
+
+  "description": "Sorts errors by sum of unattempted and incorrect",
+
+  "icons": {
+    "48": "icons/48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://app.quizrr.in/v2/reso"],
+      "js": ["sort.js"]
+    }
+  ],
+
+	"background" : {
+		"scripts" : ["background.js"]
+	},
+
+	"browser_action": {
+		"default_icon" : {
+			"16" : "icons/page-16.png",
+			"32" : "icons/page-32.png"
+		}
+	}
+}
